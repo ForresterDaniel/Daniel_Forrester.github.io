@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Portfolio</title>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="left">
+      <a href="/">Graduate Data Scientist</a>
+    </div>
+
+    <div class="right">
+      <a href="http://github.com" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github"></i>
+        <span>Github</span>
+      </a>
+      
+      <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin"></i>
+        <span>Linkedin</span>
+      </a>
+      
+      <a href="mailto:john@example.com">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Email</span>
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- SECTION 1: Hero -->
+    <section class="hero-section">
+      <div class="text">
+        <h2>Daniel Forrester</h2>
+        <p> Recent Computer Science graduate with solid experience in Data Science, including delivery of machine learning pipelines across finance, healthcare, and computer vision projects. Proficient in statistical modelling, deep learning, and data engineering, with strong focus on reproducibility, leadership, and communication. Expertise in Python-based tooling and MLOps principles, with ability to manage complex tasks, extract actionable insights, and drive outcomes across technical and stakeholder environments.</p>
+
+        <div class="links">
+          <a href="#skills">
+            <i class="fa-solid fa-code"></i>
+            <span>Skills</span>
+          </a>
+          
+          <a href="#testimony">
+            <i class="fa-solid fa-pen"></i>
+            <span>Testimony</span>
+          </a>
+          
+          <a href="#contact">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Contact</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="headshot">
+        <img src="images/dan.png" alt="Dan headshot">
+      </div>
+    </section>
+
+    <!-- SECTION 2: Skills -->
+    <section id="skills" class="skills-section">
+      <h2>Skills</h2>
+      <div class="text">
+            <div><strong>Programming Languages:</strong> Python, R, Java, C, C++, C#, SQL, Bash, Golang.</div>
+            <div><strong>Frameworks & Libraries:</strong> TensorFlow-Keras, PyTorch, Scikit-Learn, Pandas, NumPy, Matplotlib, Seaborn, Flask, SQLAlchemy.</div>
+            <div><strong>Domains:</strong> Deep Learning, Machine Learning, Computer Vision, Data Engineering, Data Visualisation, Data Modelling.</div>
+        </div>
+        <div style="height: 50px;"></div>
+
+    <!-- SECTION 2.2: Projects -->
+    <h2>Projects</h2>
+    <div class="cells">
+
+      <div class="cell" id="bi-analytics-btn" style="cursor:pointer;">
+        <i class="fa-solid fa-chart-simple"></i>
+        <span>BI Analytics*</span>
+      </div>
+
+      <div class="cell" id="fintech-dl-nlp-btn" style="cursor:pointer;">
+        <i class="fa-solid fa-money-bill-trend-up"></i>
+        <span>FinTech DL NLP*</span>
+      </div>
+
+      <div class="cell" style="cursor:pointer;">
+        <i class="fa-solid fa-dna"></i>
+        <span>BioMed Data Science</span>
+      </div>
+
+      <div class="cell" id="computer-vision-btn" style="cursor:pointer;">
+        <i class="fa-solid fa-eye"></i>
+        <span>Computer Vision*</span>
+      </div>
+
+      <div class="cell" id="predictive-analytics-btn" style="cursor:pointer;">
+        <i class="fa-solid fa-chart-line"></i>
+        <span>Predictive Analytics*</span>
+      </div>
+
+      <div class="cell" style="cursor:pointer;">
+        <i class="fa-solid fa-chart-pie"></i>
+        <span>EDA & Data Visualisation</span>
+      </div>
+
+      <div class="cell" style="cursor:pointer;">
+        <i class="fa-solid fa-globe"></i>
+        <span>Full-Stack Web Dev</span>
+      </div>
+
+      <div class="cell" style="cursor:pointer;">
+        <i class="fa-solid fa-database"></i>
+        <span>Backend Web Dev</span>
+      </div>
+
+      <div class="cell" style="cursor:pointer;">
+        <i class="fa-solid fa-wifi"></i>
+        <span>Networking</span>
+      </div>
+
+      <div class="cell" style="cursor:pointer;">
+        <i class="fa-solid fa-square-root-variable"></i>
+        <span>Data Science Mathematics</span>
+      </div>
+
+    </div>
+
+    <script>
+      document.getElementById('bi-analytics-btn').addEventListener('click', () => {
+        const dashboard = document.getElementById('bi-dashboard');
+        if (dashboard.style.display === 'block') {
+          dashboard.style.display = 'none';
+        } else {
+          hideAllDetails();
+          dashboard.style.display = 'block';
+          dashboard.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+
+      document.getElementById('predictive-analytics-btn').addEventListener('click', () => {
+        const displayDiv = document.getElementById('predictive-analytics-display');
+        if (displayDiv.style.display === 'block') {
+          displayDiv.style.display = 'none';
+        } else {
+          hideAllDetails();
+          displayDiv.style.display = 'block';
+          displayDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+
+      document.getElementById('computer-vision-btn').addEventListener('click', () => {
+        const cvDisplay = document.getElementById('computer-vision');
+        if (cvDisplay.style.display === 'block') {
+          cvDisplay.style.display = 'none';
+        } else {
+          hideAllDetails();
+          cvDisplay.style.display = 'block';
+          cvDisplay.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+
+      document.getElementById('fintech-dl-nlp-btn').addEventListener('click', () => {
+        const fintechDisplay = document.getElementById('fintech-dl-nlp-display');
+
+        // Hide all other detail sections
+        hideAllDetails();
+
+        // Toggle FinTech DL NLP display
+        if (fintechDisplay.style.display === 'block') {
+          fintechDisplay.style.display = 'none';
+        } else {
+          fintechDisplay.style.display = 'block';
+          fintechDisplay.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+
+      // Update hideAllDetails function to include fintech-dl-nlp-display
+      const hideAllDetails = () => {
+        const biDashboard = document.getElementById('bi-dashboard');
+        const predictiveDisplay = document.getElementById('predictive-analytics-display');
+        const computerVisionDisplay = document.getElementById('computer-vision');
+        const fintechDisplay = document.getElementById('fintech-dl-nlp-display');
+
+        if (biDashboard) biDashboard.style.display = 'none';
+        if (predictiveDisplay) predictiveDisplay.style.display = 'none';
+        if (computerVisionDisplay) computerVisionDisplay.style.display = 'none';
+        if (fintechDisplay) fintechDisplay.style.display = 'none';
+      };
+
+    </script>
+
+    <!-- Hidden displays -->
+    <section id="bi-dashboard" style="display:none; padding: 20px; margin-bottom: 20px;">
+      <iframe
+        height="600"
+        src="https://app.powerbi.com/view?r=eyJrIjoiNjk4NjkyNTQtMTBkZS00ZDBlLTljZmItYmY4NDBlOThkOTU0IiwidCI6IjNlYTdjMTI4LWM2MDEtNDQ3OS1hMDAzLWUxNGQwMGMwYjVjYiJ9"
+        frameborder="0"
+        allowfullscreen="true"
+        style="max-width: 900px; width: 100%; display: block; margin: 0 auto;"
+      ></iframe>
+    </section>
+
+    <div id="predictive-analytics-display" style="display:none; text-align:center; margin-top: 20px;">
+      <img
+        src="images/Churns.png"
+        alt="Predictive Analytics Visualization"
+        style="max-width: 80%; height: auto; border: 1px solid #ccc; border-radius: 8px;"
+      >
+    </div>
+
+    <div id="computer-vision" style="display:none; text-align:center; margin-top: 20px;">
+      <img
+        src="images/MNIST.png"
+        alt="MNIST Visualization"
+        style="max-width: 80%; height: auto; border: 1px solid #ccc; border-radius: 8px;"
+      >
+    </div>
+
+    <div id="fintech-dl-nlp-display" style="display:none; text-align:center; margin-top: 20px;">
+      <iframe 
+        src="documents/Research-Paper.pdf" 
+        style="width: 90%; height: 600px; border: 1px solid #ccc; border-radius: 8px;" 
+        frameborder="0" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+
+
+
+
+    </section>
+
+    <!-- SECTION 3: Testimony -->
+    <section id="testimony" class="testimony-section">
+      <h2>Testimony</h2>
+
+      <div class="group">
+        <div class="person-details">
+          <img src="images/testimony-headshot.jpg">
+          <p>Daniel Forrester</p>
+          <p>BI at your door</p>
+        </div>
+
+        <div class="text">
+          I specialise in delivering reliable and reproducible data science solutions across complex domains such as finance, healthcare, and computer vision. My work is grounded in rigorous statistical modelling, deep learning, and data engineering practices. I prioritise clarity, effective communication, and leadership to ensure projects meet technical and stakeholder expectations. With strong expertise in Python-based tools and MLOps principles, I manage complex pipelines efficiently and extract actionable insights that drive meaningful outcomes.
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Contact -->
+    <section id="contact" class="contact-section">
+      <h2>Contact</h2>
+
+      <div class="group">
+        <div class="text">
+          <div>I welcome inquiries related to data science collaboration, consulting, or career opportunities. Please feel free to reach out via email or LinkedIn, and I will respond promptly. I am open to relocation and new challenges that allow me to apply my skills and contribute meaningfully.</div>
+        </div>
+
+        <form>
+          <label for="name">Name</label>
+          <input type="text" id="name">
+
+          <label for="email">Email</label>
+          <input type="email" id="email">
+
+          <label for="message">Message</label>
+          <textarea id="message" cols="30" rows="5"></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
