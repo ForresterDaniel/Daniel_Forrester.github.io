@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Plots</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Hide horizontal overflow */
+        }
+
+        .scatter {
+            width: 55%; /* Adjust the width as needed */
+            height: 100vh; /* Use the full height of the viewport */
+            float: left;
+            border: none; /* Remove iframe border */
+        }
+
+        .bar {
+            width: 45%; /* Adjust the width as needed */
+            height: 100vh; /* Use the full height of the viewport */
+            float: left;
+            border: none; /* Remove iframe border */
+        }
+    </style>
+</head>
+<body>
+    <iframe class="scatter" src="combined_plots.html" frameborder="0"></iframe>
+    <iframe class="bar" src="CombinedBarChart.html" frameborder="0"></iframe>
+</body>
+</html>
