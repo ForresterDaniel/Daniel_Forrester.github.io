@@ -8,9 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
   <link rel="stylesheet" href="styles.css">
 
   <title>Portfolio</title>
@@ -23,17 +21,17 @@
     </div>
 
     <div class="right">
-      <a href="http://github.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/ForresterDaniel" target="_blank" rel="noopener noreferrer">
         <i class="fa-brands fa-github"></i>
         <span>Github</span>
       </a>
       
-      <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.linkedin.com/in/-daniel-forrester/" target="_blank" rel="noopener noreferrer">
         <i class="fa-brands fa-linkedin"></i>
         <span>Linkedin</span>
       </a>
       
-      <a href="mailto:john@example.com">
+      <a href="mailto:danforrester4270@gmail.com">
         <i class="fa-solid fa-envelope"></i>
         <span>Email</span>
       </a>
@@ -53,9 +51,9 @@
             <span>Skills</span>
           </a>
           
-          <a href="#testimony">
+          <a href="#about">
             <i class="fa-solid fa-pen"></i>
-            <span>Testimony</span>
+            <span>About</span>
           </a>
           
           <a href="#contact">
@@ -86,42 +84,42 @@
 
       <div class="cell" id="bi-analytics-btn" style="cursor:pointer;">
         <i class="fa-solid fa-chart-simple"></i>
-        <span>BI Analytics*</span>
+        <span>BI Analytics</span>
       </div>
 
       <div class="cell" id="fintech-dl-nlp-btn" style="cursor:pointer;">
         <i class="fa-solid fa-money-bill-trend-up"></i>
-        <span>FinTech DL NLP*</span>
+        <span>FinTech NLP</span>
       </div>
 
-      <div class="cell" style="cursor:pointer;">
+      <div class="cell" id="biomed-data-science-btn" style="cursor:pointer;">
         <i class="fa-solid fa-dna"></i>
-        <span>BioMed Data Science</span>
+        <span>BioMed</span>
       </div>
 
       <div class="cell" id="computer-vision-btn" style="cursor:pointer;">
         <i class="fa-solid fa-eye"></i>
-        <span>Computer Vision*</span>
+        <span>Computer Vision</span>
       </div>
 
       <div class="cell" id="predictive-analytics-btn" style="cursor:pointer;">
         <i class="fa-solid fa-chart-line"></i>
-        <span>Predictive Analytics*</span>
+        <span>Predictive Analytics</span>
       </div>
 
-      <div class="cell" style="cursor:pointer;">
+      <div class="cell" id="eda-btn" style="cursor:pointer;">
         <i class="fa-solid fa-chart-pie"></i>
-        <span>EDA & Data Visualisation</span>
+        <span>EDA</span>
       </div>
 
       <div class="cell" style="cursor:pointer;">
         <i class="fa-solid fa-globe"></i>
-        <span>Full-Stack Web Dev</span>
+        <span>Full-Stack WebDev</span>
       </div>
 
       <div class="cell" style="cursor:pointer;">
         <i class="fa-solid fa-database"></i>
-        <span>Backend Web Dev</span>
+        <span>Backend WebDev</span>
       </div>
 
       <div class="cell" style="cursor:pointer;">
@@ -131,7 +129,7 @@
 
       <div class="cell" style="cursor:pointer;">
         <i class="fa-solid fa-square-root-variable"></i>
-        <span>Data Science Mathematics</span>
+        <span>Research</span>
       </div>
 
     </div>
@@ -185,18 +183,51 @@
         }
       });
 
-      // Update hideAllDetails function to include fintech-dl-nlp-display
+      document.getElementById('biomed-data-science-btn').addEventListener('click', () => {
+        const fintechDisplay = document.getElementById('biomed-data-science-display');
+
+        // Hide all other detail sections
+        hideAllDetails();
+
+        // Toggle FinTech DL NLP display
+        if (fintechDisplay.style.display === 'block') {
+          fintechDisplay.style.display = 'none';
+        } else {
+          fintechDisplay.style.display = 'block';
+          fintechDisplay.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+
+      document.getElementById('eda-btn').addEventListener('click', () => {
+        const edaDisplay = document.getElementById('eda-display');
+        if (edaDisplay.style.display === 'block') {
+          edaDisplay.style.display = 'none';
+        } else {
+          hideAllDetails();
+          edaDisplay.style.display = 'block';
+          edaDisplay.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+
+      
       const hideAllDetails = () => {
         const biDashboard = document.getElementById('bi-dashboard');
         const predictiveDisplay = document.getElementById('predictive-analytics-display');
         const computerVisionDisplay = document.getElementById('computer-vision');
         const fintechDisplay = document.getElementById('fintech-dl-nlp-display');
+        const biomedDisplay = document.getElementById('biomed-data-science-display');
+        const edaDisplay = document.getElementById('eda-display');
 
         if (biDashboard) biDashboard.style.display = 'none';
         if (predictiveDisplay) predictiveDisplay.style.display = 'none';
         if (computerVisionDisplay) computerVisionDisplay.style.display = 'none';
         if (fintechDisplay) fintechDisplay.style.display = 'none';
+        if (biomedDisplay) biomedDisplay.style.display = 'none';
+        if (edaDisplay) edaDisplay.style.display = 'none';
       };
+
+
+
 
     </script>
 
@@ -236,21 +267,35 @@
       </iframe>
     </div>
 
+    <div id="biomed-data-science-display" style="display:none; text-align:center; margin-top: 20px;">
+      <iframe 
+        src="documents/Biomed-Paper.pdf" 
+        style="width: 90%; height: 600px; border: 1px solid #ccc; border-radius: 8px;" 
+        frameborder="0" 
+        allowfullscreen>
+      </iframe>
+    </div>
 
-
-
+    <div id="eda-display" style="display:none; text-align:center; margin-top: 20px;">
+      <iframe 
+        src="documents\Data-Visualisations.html" 
+        style="transform-origin: top left; transform: scale(0.85); width: 117.65%; height: 700px; border: 1px solid #ccc; border-radius: 8px;" 
+        frameborder="0" 
+        allowfullscreen>
+      </iframe>
+    </div>
 
     </section>
 
-    <!-- SECTION 3: Testimony -->
-    <section id="testimony" class="testimony-section">
-      <h2>Testimony</h2>
+    <!-- SECTION 3: About -->
+    <section id="about" class="about-section">
+      <h2>About me</h2>
 
       <div class="group">
         <div class="person-details">
           <img src="images/testimony-headshot.jpg">
           <p>Daniel Forrester</p>
-          <p>BI at your door</p>
+          <p>Where Data Meets Discipline</p>
         </div>
 
         <div class="text">
